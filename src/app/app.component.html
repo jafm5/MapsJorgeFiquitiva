@@ -4,7 +4,14 @@
           <div >
               <div >
                  <h3 text-align: center>Marca tu posición en el mapa</h3>
-                 <google-map></google-map>
+                 <google-map width = "1000" height="700" [center]="position" >
+                   <map-marker
+                    [position]="position"
+                    [label]= "label"
+                    [title]= "title"
+                   >
+                   </map-marker>
+                 </google-map>
               </div>
           </div>
       </div>
