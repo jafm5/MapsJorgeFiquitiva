@@ -6,14 +6,15 @@
                  <h3 text-align: center>Marca tu posición en el mapa</h3>
 
                  <google-map width = "1000" height="700" [center]="position" >
-                   <map-marker
-                    [position]="position"
+                   <map-marker *ngFor= "let location of locations"
+                    [position]="location"
                     [label]= "label"
                     [title]= "title"
                    >
                    </map-marker>
                  </google-map>
                  <button (click)="posicionActual()">Mostrar posición actual</button>
+                 <!-- <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/> -->
               </div>
           </div>
       </div>
